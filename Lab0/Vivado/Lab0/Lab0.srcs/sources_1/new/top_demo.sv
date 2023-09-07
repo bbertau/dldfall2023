@@ -27,7 +27,5 @@ module top_demo
   output logic [7:0] led
 );
 
-  assign led[3:0] = sw;
-  assign led[7:4] = btn;
-
+  sillyFullAdder(.a(sw[0]), .b(sw[1]), .cin(sw[2]), .sum(led[0]), .cout(led[1]));
 endmodule
